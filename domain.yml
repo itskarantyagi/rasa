@@ -1,0 +1,87 @@
+version: "3.1"
+
+actions:
+  - action_speak
+  - action_reserve_id
+  - phone_no
+  - user_email
+
+entities:
+- user_name
+- reservation_id
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - say_my_name
+  - your_name
+  - tell_joke
+  - talk_to_cr
+  - temperature
+  - need_help
+  - update_reservation
+  - get_reservationID
+  - get_phoneno
+  - get_email
+  - checkin_time
+  - cancel_reservation
+  - get_cs_mail
+  - thanks
+
+responses:
+  utter_chatbot_name:
+    - text: "I am a bot made by Karan"
+  utter_askname:
+    - text: "Can I please know your name?"
+
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_how_can_i_help:
+    - text: "How can I help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_talk_to_cr:
+    - text: "Alright, Please call at 1800-232-232 to talk to our customer service representative"
+
+  utter_anything_else:
+    - text: "Is there anything else I can assist you with?"
+
+  utter_customerservice_mail:
+    - text: "Please feel free to drop us your suggestions/feedback at abc@hotel.com"
+
+  utter_ask_joke:
+    - text: "Do you want to hear a joke?"
+
+  utter_joke:
+    - text: "What kind of concert only costs 45 cents? A 50 Cent concert featuring Nickelback."
+
+  utter_bye:
+    - text: "Bbye, Take Care."
+
+  utter_checkin_time:
+    - text: "The check-in time for all our hotels is Noon(12:00:00 PM)."
+
+  utter_get_reservationID:
+    - text: "Please enter your reservation ID"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

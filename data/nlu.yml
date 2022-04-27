@@ -1,0 +1,238 @@
+version: "3.1"
+
+nlu:
+  #1
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+  #2
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  #3
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  #4
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+  #5
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  #6
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  #7
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  #8
+  - intent: say_my_name
+    examples: |
+      - I am [Karan](user_name)
+      - I am [abc](user_name)
+      - I am [xyz](user_name)
+      - My name is [Karan Tyagi](user_name)
+      - My name is [xyz](user_name)
+      - My name is [Nishu](user_name)
+      - [Karan](user_name)
+      - [zyx](user_name)
+  #9
+  - intent: your_name
+    examples: |
+      - What's your name?
+      - What is your name chatbot?
+      - Who are you?
+      - Who is there?
+      - Who's there?
+
+    #10
+  - intent: tell_joke
+    examples: |
+      - Tell me a joke
+      - I wanna hear a joke
+      - I want to hear a joke
+      - how about a joke?
+      - joke?
+      - I want a joke
+      - Can you tell a joke?
+      - Can you say a joke?
+      - Joke
+  #11
+  - intent: talk_to_cr
+    examples: |
+      - I want to talk to customer service representative
+      - I want to talk to customer agent
+      - Customer agent
+      - Customer service agent
+      - Customer service
+      - I want to talk to a human
+      - I want a human
+      - Put me on call with customer agent
+      - I want to talk to call center agent
+
+  #12
+  - intent: temperature
+    examples: |
+      - What's the temperature right now?
+      - Tell me the temperature
+      - temperature
+      - temp
+      - How cold is it?
+      - How hot is it?
+      - how is it outside?
+
+  #13
+  - intent: need_help
+    examples: |
+      - I need help
+      - I need help with my reservation
+      - I want help with reservation
+      - can you help me with reservation
+      - can you help with reservation
+      - need help
+      - I want help
+      - reservation help
+
+    #14
+  - intent: update_reservation
+    examples: |
+      - I want to update my reservation
+      - update reservation
+      - update rservation
+      - update my reservation
+      - change my reservation
+      - reservation update
+
+    #15
+  - intent: get_reservationID
+    examples: |
+      - [TEF123](reservation_id)
+      - My reservation id is [EDF134](reservation_id)
+      - Reservation id [EBC223](reservation_id)
+      - Reservation ID [ERRmy r483](reservation_id)
+      - Reservation [FDS198](reservation_id)
+      - RID [GDF942](reservation_id)
+
+
+  #16
+  - intent: get_phoneno
+    examples: |
+      - My phone number is [5468856743](phone_no)
+      - Phone number is [4086607308](phone_no)
+      - Number is [9540866593](phone_no)
+      - My number is [9895358593](phone_no)
+      - [9895938593](phone_no)
+      - [89982937481](phone_no)
+
+  #17
+  - intent: get_email
+    examples: |
+      - my email is [karnatyagi80@gmail.com](user_email)
+      - my email [abc@gmail.com](user_email)
+      - [xyz@hotmail.com](user_email)
+      - [kselflsef@outlook.com)(user_email)
+      - [ffsef@sefesf.com](user_email)
+      - Email: [Karaefnjdsnf@sjsu.edu](user_email)
+      - email id [tyagi@sjsu.edu](user_email)
+
+  #18
+  - intent: checkin_time
+    examples: |
+      - what's the check-in time?
+      - check-in time
+      - move-in time?
+
+  #19
+  - intent: cancel_reservation
+    examples: |
+      - I want to cancel my reservation
+      - I want to cancel a reservation
+      - cancel reservation
+      - reservation cancel
+      - cancel my reservation
+
+  #20
+  - intent: get_cs_mail
+    examples: |
+      - I want hotel mail id
+      - I want grievance mail
+      - I want customer service email
+      - I want customer service email id
+      - I want email id for customer service
+      - Customer service mail id
+
+
+  #21
+  - intent: thanks
+    examples: |
+      - Thanks
+      - Thank you
+      - Thank you so much
+      - ty
+      - tysm
+      - tysm, ttyl

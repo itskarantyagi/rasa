@@ -1,0 +1,105 @@
+version: "3.1"
+
+stories:
+  - story: ask name
+    steps:
+      - intent: your_name
+      - action: utter_chatbot_name
+      - action: utter_askname
+      - intent: say_my_name
+      - action: action_speak
+
+  - story: happy path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+      - action: utter_ask_joke
+      - or:
+          - intent: affirm
+          - intent: thanks
+      - action: utter_joke
+
+  - story: happy path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+      - action: utter_ask_joke
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: talk_to_customer_representative
+    steps:
+      - intent: talk_to_cr
+      - action: utter_talk_to_cr
+      - action: utter_anything_else
+
+  - story: get_customerservice_mail
+    steps:
+      - intent: get_email
+      - action: utter_customerservice_mail
+      - action: utter_anything_else
+
+  - story: joke_path
+    steps:
+      - intent: tell_joke
+      - action: utter_joke
+
+  # bot challenge
+  - story: bot path 1
+    steps:
+      - intent: bot_challenge
+      - action: utter_chatbot_name
+
+  # user tells his/her name
+  - story: user name 1
+    steps:
+      - intent: say_my_name
+      - action: utter_chatbot_name
+      - action: action_speak
+
+  # checkin time
+  - story: checkin time
+    steps:
+      - intent: checkin_time
+      - action: utter_checkin_time
+      - action: utter_anything_else
+
+  # user types "i need help"
+  - story: user help
+    steps:
+      - intent: need_help
+      - action: utter_how_can_i_help
+  # update email for reservation
+  - story: update reservation based on id
+    steps:
+      - intent: update_reservation
+      - action: utter_get_reservationID
+      - intent: get_reservationID
+      - action: action_reserve_id
+
+
+
